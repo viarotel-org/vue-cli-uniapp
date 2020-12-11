@@ -1,0 +1,126 @@
+@tailwind base;
+
+/*初始化*/
+page,
+view,
+scroll-view,
+swiper,
+swiper-item,
+cover-view,
+cover-image,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+camera,
+image,
+video {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+/* button 初始化 */
+button {
+  background-color: transparent;
+  border-radius: 0rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  display: inline-block;
+  line-height: 1;
+}
+
+button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}
+
+.button-hover {
+  /*点击后样式*/
+  color: #000;
+  background-color: transparent;
+}
+
+img {
+  position: relative;
+}
+img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  /* background-color: #e0e0e0; */
+  background: #e0e0e0 url("/static/image/temp-image.png") center / 60% no-repeat;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* 系统状态栏高度 */
+.border-t-bar {
+  border-top: var(--status-bar-height) solid transparent;
+}
+
+/* 内容区域距离顶部的距离 */
+.border-t-window {
+  border-top: var(--window-top) solid transparent;
+}
+
+/* 内容区域距离底部的距离 */
+.border-b-window {
+  border-bottom: var(--window-bottom) solid transparent;
+}
+
+/* 横向平滑滚动 */
+.overflow-y-scroll-smooth {
+  @apply overflow-y-scroll scrolling-touch static;
+}
+
+/* 纵向平滑滚动 */
+.overflow-x-scroll-smooth {
+  @apply overflow-x-scroll scrolling-touch static;
+}
+
+/*宽高等比*/
+.wh-const::before {
+  content: "";
+  padding-top: 100%;
+  float: left;
+}
+
+.wh-const::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 隐藏滚动条 */
+.scrollbar_none::-webkit-scrollbar {
+  display: none;
+}
+
+/* 文字渐变 */
+.bg-clip-text {
+  -webkit-background-clip: text;
+}
+
+/*高斯模糊*/
+.backdrop-filter-blur-5 {
+  backdrop-filter: blur(5px);
+}
