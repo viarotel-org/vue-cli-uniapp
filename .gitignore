@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
-unpackage/
 dist/
 
 # local env files
@@ -16,6 +15,7 @@ yarn-error.log*
 .project
 .idea
 .vscode
+.hbuilderx
 *.suo
 *.ntvs*
 *.njsproj

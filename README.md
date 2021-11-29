@@ -2,7 +2,7 @@
 
 # vue-uniapp-cli
 
-基于uniapp cli模式集成的模板, ui库使用 uview(已配置全自动按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(添加了uniapp适配器支持, 完善了aes+rsa接口加密功能)
+基于uniapp cli模式集成的模板, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [tailwindcss](https://www.tailwindcss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持, 完善了aes+rsa接口加密功能) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成)
 
 <!-- PROJECT SHIELDS -->
 
@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://github.com/Viarotel/vue-uniapp-cli">
-    <img src="src/static/image/logo.png" alt="viarotel" height="80">
+    <img src="src/static/images/logo.png" alt="viarotel" height="80">
   </a>
   <h3 align="center">vue-uniapp-cli</h3>
   <p align="center">
@@ -33,6 +33,7 @@
     ·
     <a href="https://github.com/Viarotel/vue-uniapp-cli/issues">提出新特性</a>
   </p>
+
 
 
 ## 目录
@@ -108,12 +109,16 @@ filetree
 ├── /src/ // 存放项目源码及需要引用的资源文件。
 │  ├── /assets/ //存放项目中需要用到的资源文件，css、js、images等。
 │  ├── /components/ //存放vue开发中一些公共组件：header.vue、footer.vue等。
-│  ├── /config/ //全局配置文件
+│  ├── /configs/ //全局配置文件
+│  ├── /directives/ //全局指令注册
+│  ├── /icons/ //存放图标的地方
 │  ├── /pages/ //存在vue页面组件的文件夹。
 │  ├── /plugins/ //项目常用的插件集合
-│  ├── /request/ //接口配置
+│  ├── /requests/ //接口配置
+│  ├── /router/ //路由配置
 │  ├── /static/ //存放应用引用静态资源（如图片、视频等）的目录，注意：静态资源只能存放于此
 │  ├── /store/ //存放 vuex 为vue专门开发的状态管理器。
+│  ├── /styles/ //存放全局样式
 │  ├── /utils/ //存放vue开发过程中一些公共的.js方法。
 ├── App.vue //项目入口文件
 ├── ext.json // 小程序作为第三方开发需要用到的配置文件 动态切换appid等功能
@@ -141,6 +146,7 @@ filetree
 - [tailwindcss](https://www.tailwindcss.cn/)
 - [axios](http://www.axios-js.com/)
 - [vuex](https://vuex.vuejs.org/zh/)
+- [uni-simple-router](https://hhyang.cn/v2/)
 
 ### 关键字
 
@@ -149,6 +155,7 @@ filetree
 - tailwindcss
 - axios
 - vuex
+- uni-simple-router
 
 ### 版本控制
 

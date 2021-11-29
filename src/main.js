@@ -1,44 +1,48 @@
 import Vue from 'vue';
+import App from '@/App';
+import store from '@/store';
+
+import { router, RouterMount } from '@/router';
+
+import plugins from '@/plugins';
+
+import requests from '@/requests';
+
+import icons from '@/icons';
+
+import directives from '@/directives';
+
+import tempImage from './utils/tempImage';
+
+import showDictLabel from './utils/showDictLabel';
+
+import { dialog, toast, loading } from './utils/modal';
 
 Vue.config.productionTip = false;
 
-import App from './App';
 App.mpType = 'app';
 
-import store from './store';
-Vue.prototype.$store = store;
-
-import uView from "uview-ui";
-Vue.use(uView);
-
-import request from "./request";
-Vue.use(request);
-
-// this.$Router操作路由 this.$Route获取参数
-import './plugins/uniRouter';
-
-import { tempImage } from "./utils";
+Vue.use(router);
+Vue.use(plugins);
+Vue.use(requests);
+Vue.use(icons);
+Vue.use(directives);
 Vue.prototype.$tempImage = tempImage;
-
-//自定义或原生底部导航栏适配器跳转工具
-import uniTabberAdapterSkip from "@/plugins/uniTabberAdapterSkip";
-Vue.prototype.$uniTabberAdapterSkip = uniTabberAdapterSkip;
-
-//支持异步操作的计算属性工具
-import AsyncComputed from 'vue-async-computed';
-Vue.use(AsyncComputed)
+Vue.prototype.$showDictLabel = showDictLabel;
+Vue.prototype.$dialog = dialog;
+Vue.prototype.$toast = toast;
+Vue.prototype.$loading = loading;
 
 const app = new Vue({
-    store,
-    ...App
+  store,
+  ...App,
 });
 
-//H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
+// v1.3.5起 H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
 // #ifdef H5
-import { RouterMount } from 'uni-simple-router';
-RouterMount(app, '#app');
+RouterMount(app, router, '#app');
 // #endif
 
 // #ifndef H5
-app.$mount(); //为了兼容小程序及app端必须这样写才有效果
+app.$mount(); // 为了兼容小程序及app端必须这样写才有效果
 // #endif

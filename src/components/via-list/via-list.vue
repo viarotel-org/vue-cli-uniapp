@@ -1,25 +1,22 @@
 <template>
   <scroll-view
-    @scrolltolower="
-      !isFinished && ($emit('update:is-load', true), $emit('load', $event))
-    "
-    @refresherrefresh="
-      $emit('update:is-refresh', true);
-      $emit('refresh', $event);
-    "
-    :refresher-triggered="isRefresh"
+    :refresher-triggered="refreshed"
+    :class="[customClass]"
     :style="[customStyle]"
     :refresher-enabled="refresherEnabled"
     scroll-y
     scroll-anchoring
     class="absolute inset-0"
+    :refresher-background="refresherBackground"
+    @scrolltolower="onScrolltolower"
+    @refresherrefresh="onRefresherrefresh"
   >
     <slot v-if="$slots.default"></slot>
 
     <template v-if="$slots.item">
       <slot
-        name="item"
         v-for="(item, index) in value"
+        name="item"
         :item="item"
         :index="index"
       ></slot>
@@ -28,20 +25,25 @@
     <template v-if="_openEmpty">
       <slot name="empty">
         <view class="flex flex-col items-center justify-center h-full">
-          <u-empty :text="emptyText" :mode="emptyType">
+          <u-empty
+            :text="emptyText"
+            :mode="emptyType"
+          >
             <template #bottom>
-              <view v-if="!!emptyButtonText" class="mt-4">
+              <view
+                v-if="!!emptyButtonText"
+                class="w-full"
+              >
                 <u-button
-                  @click="$emit('empty-button', $event)"
+                  hover-class="none"
+                  ripple
                   size="medium"
-                  :custom-style="{
-                    backgroundColor: siteInfo.themeColor,
-                    color: siteInfo.isDark ? '#000000' : '#ffffff',
-                  }"
                   shape="circle"
-                  type="success"
-                  >{{ emptyButtonText }}</u-button
+                  type="primary"
+                  @click="$emit('empty-button', $event)"
                 >
+                  {{ emptyButtonText }}
+                </u-button>
               </view>
             </template>
           </u-empty>
@@ -49,13 +51,16 @@
       </slot>
     </template>
 
-    <view v-if="isData && !closeLoadmore" class="trigger py-4">
+    <view
+      v-if="isData && !closeLoadmore"
+      class="py-4 trigger"
+    >
       <u-loadmore
-        @click="
-          !isFinished &&
-            ($emit('update:is-load', true), this.$emit('load-more', $event))
-        "
         :status="loadmoreType"
+        @click="
+          !finished &&
+            ($emit('update:loaded', true), $emit('load-more', $event))
+        "
       />
     </view>
   </scroll-view>
@@ -63,58 +68,63 @@
 
 <script>
 export default {
-  name: "via-list",
+  name: 'ViaList',
   props: {
     value: {
       type: Array,
       default: () => [],
     },
-    customStyle: {
-      type: Object,
+    customClass: {
+      type: [Object, String, Array],
       default: () => {},
     },
-    isFinished: {
-      type: Boolean,
-      default: false,
-    },
-    isLoad: {
-      type: Boolean,
-      default: false,
-    },
-    isRefresh: {
-      type: Boolean,
-      default: false,
-    },
     customStyle: {
-      type: Object,
+      type: [Object, String, Array],
       default: () => {},
     },
-    //开启空状态功能
+    finished: {
+      type: Boolean,
+      default: false,
+    },
+    loaded: {
+      type: Boolean,
+      default: false,
+    },
+    refreshed: {
+      type: Boolean,
+      default: false,
+    },
+    // 开启空状态功能
     openEmpty: {
       type: Boolean,
       default: false,
     },
     emptyType: {
       type: String,
-      default: "data",
+      default: 'data',
     },
     emptyText: {
       type: String,
-      default: "列表数据为空",
+      default: '列表数据为空',
     },
     emptyButtonText: {
       type: String,
-      default: "点击刷新",
+      default: '点击刷新',
     },
-    //关闭下拉刷新
+    // 关闭下拉刷新
     closeRefresh: {
       type: Boolean,
       default: false,
     },
-    //关闭下拉加载
+    // 关闭下拉加载
     closeLoadmore: {
       type: Boolean,
       default: false,
+    },
+    // 下拉刷新背景色
+    refresherBackground: {
+      type: String,
+      default: 'transparent',
     },
   },
   computed: {
@@ -131,13 +141,13 @@ export default {
       return this.$store.getters.siteInfo;
     },
     loadmoreType() {
-      let tempStr = "";
-      if (this.isFinished) {
-        tempStr = "nomore";
-      } else if (this.isLoad) {
-        tempStr = "loading";
+      let tempStr = '';
+      if (this.finished) {
+        tempStr = 'nomore';
+      } else if (this.loaded) {
+        tempStr = 'loading';
       } else {
-        tempStr = "loadmore";
+        tempStr = 'loadmore';
       }
       return tempStr;
     },
@@ -146,6 +156,20 @@ export default {
     // console.log("via-list", this);
   },
   methods: {
+    // 自定义下拉刷新被触发
+    onRefresherrefresh(e) {
+      this.$emit('update:refreshed', true);
+      this.$emit('refresh', e);
+    },
+    // 滚动到底部触发
+    onScrolltolower(e) {
+      if (finished) {
+        return;
+      }
+
+      this.$emit('update:loaded', true);
+      this.$emit('load', e);
+    },
     /**
      * @desc 下拉刷新 上拉加载 数据封装
      * @param {Array} data 数组
@@ -153,17 +177,18 @@ export default {
      * @param {function} length 每次返回的数组长度
      */
     $loadUtils(data, { length = 10 } = {}) {
-      if (this.isLoad) {
-        this.$emit("input", [...this.value, ...data]);
-        this.$emit("update:is-load", false);
+      if (this.loaded) {
+        this.$emit('input', [...this.value, ...data]);
+        this.$emit('update:loaded', false);
       } else {
-        this.$emit("input", [...data]);
-        this.$emit("update:is-refresh", false);
+        this.$emit('input', [...data]);
+        this.$emit('update:refreshed', false);
       }
+
       if (data.length < length) {
-        this.$emit("update:is-finished", true);
+        this.$emit('update:finished', true);
       } else {
-        this.$emit("update:is-finished", false);
+        this.$emit('update:finished', false);
       }
     },
   },

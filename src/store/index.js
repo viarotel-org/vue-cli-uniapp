@@ -1,28 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import getters from './getters';
-
-const banlist = {
-  // sms: true
-};
-const modules = getModules(require.context("./modules", true, /\.js$/));
-function getModules(files) {
-  const rules = (path) => path.replace(/(.*\/)*([^.]+).*/ig, "$2");
-  const filePathArr = files.keys().filter(path => !banlist[rules(path)]);
-  return filePathArr.reduce((arr, path) => {
-    let name = rules(path);
-    arr[name] = {
-      ...files(path).default,
-      namespaced: true
-    };
-    return arr;
-  }, []);
-}
-// console.log(modules);
+import user from './modules/user';
+import site from './modules/site';
+import dicts from './modules/dicts';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  modules,
-  getters
+const store = new Vuex.Store({
+  modules: {
+    user,
+    site,
+    dicts,
+  },
+  getters,
 });
+
+// Vue.prototype.$store = store;
+
+export default store;

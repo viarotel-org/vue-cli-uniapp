@@ -1,21 +1,20 @@
 <script>
 export default {
-  onLaunch: function() {
-    console.log("App Launch");
+  onLaunch() {
+    console.log('App Launch');
   },
-  onShow: function() {
-    console.log("App Show");
+  onShow() {
+    console.log('App Show');
   },
-  onHide: function() {
-    console.log("App Hide");
-  },
-  methods: {
+  onHide() {
+    console.log('App Hide');
   },
 };
 </script>
 
 <style lang="scss">
-@import "uview-ui/index.scss";
-@import "~@/assets/css/tailwind/index.css";
-@import "~@/assets/css/iconfont.css";
+/*每个页面公共css */
+@import "~@/styles/css/index.css";
+//discard
+@import "~@/plugins/uview-ui/index.scss";
 </style>

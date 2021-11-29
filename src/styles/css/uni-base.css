@@ -1,0 +1,70 @@
+/*初始化*/
+page,
+view,
+scroll-view,
+swiper,
+swiper-item,
+cover-view,
+cover-image,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+camera,
+image,
+video,
+uni-base,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+/* button 初始化 */
+button {
+  background-color: transparent;
+  border-radius: 0rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  display: inline-block;
+  line-height: 1;
+}
+
+button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}
+
+.button-hover {
+  /*点击后样式*/
+  color: #000;
+  background-color: transparent;
+}
+
+/* 系统状态栏高度 */
+.border-t-bar {
+  border-top: var(--status-bar-height) solid transparent;
+}
+
+/* 内容区域距离顶部的距离 */
+.border-t-window {
+  border-top: var(--window-top) solid transparent;
+}
+
+/* 内容区域距离底部的距离 */
+.border-b-window {
+  border-bottom: var(--window-bottom) solid transparent;
+}

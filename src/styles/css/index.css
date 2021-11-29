@@ -1,0 +1,17 @@
+@import "./uni-base.css";
+@import "./tailwind.css";
+
+/* 隐藏滚动条 */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* 文字渐变 */
+.bg-clip-text {
+  -webkit-background-clip: text;
+}
+
+/* 设置全局背景色 */
+page {
+  background-color: #f1f1f1;
+}

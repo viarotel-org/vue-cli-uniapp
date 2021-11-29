@@ -1,260 +1,126 @@
 {
-  "globalStyle": {
-    "navigationBarTitleText": "uni-app",
-    "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#ffffff",
-    "backgroundColor": "#f2f2f2"
-  },
-  "pages": [
-    {
-      "path": "pages/index/home",
-      "name": "home",
-      "meta": {
-        "name": "home"
-      },
-      "style": {
-        "navigationStyle": "custom",
-        "disableScroll": true
-      }
-    },
-    {
-      "path": "pages/index/account",
-      "name": "account",
-      "meta": {
-        "name": "account"
-      },
-      "style": {
-        "navigationBarTitleText": "微信授权登录",
-        // "navigationStyle": "custom",
-        "disableScroll": true
-      }
-    },
-    {
-      "path": "pages/index/tab-0",
-      "name": "tab-0",
-      "meta": {
-        "name": "tab-0"
-      },
-      "style": {
-        "navigationBarTitleText": "tab-0",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/index/tab-1",
-      "name": "tab-1",
-      "meta": {
-        "name": "tab-1"
-      },
-      "style": {
-        "navigationBarTitleText": "tab-1",
-        "navigationStyle": "custom",
-        "enablePullDownRefresh": true
-      }
-    },
-    {
-      "path": "pages/index/tab-2",
-      "name": "tab-2",
-      "meta": {
-        "name": "tab-2"
-      },
-      "style": {
-        "navigationBarTitleText": "tab-2",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/index/tab-3",
-      "name": "tab-3",
-      "meta": {
-        "name": "tab-3"
-      },
-      "style": {
-        "navigationBarTitleText": "tab-3",
-        "navigationStyle": "custom"
-      }
-    }
-  ],
-  "subPackages": [
-    // {
-    //   "root": "pages/account",
-    //   "pages": []
-    // },
-    // {
-    //   "root": "pages/tab-0",
-    //   "pages": []
-    // },
-    // {
-    //   "root": "pages/tab-1",
-    //   "pages": []
-    // },
-    // {
-    //   "root": "pages/tab-2",
-    //   "pages": []
-    // },
-    // {
-    //   "root": "pages/tab-3",
-    //   "pages": []
-    // },
-    {
-      "root": "pages/common",
-      "pages": [
-        {
-          "path": "article-info",
-          "name": "article-info",
-          "meta": {
-            "name": "article-info"
-          },
-          "style": {
-            "navigationBarTitleText": "article-info"
-          }
-        },
-        {
-          "path": "pay-status",
-          "name": "pay-status",
-          "meta": {
-            "name": "pay-status"
-          },
-          "style": {
-            "navigationBarTitleText": "pay-status"
-          }
-        },
-        {
-          "path": "pay",
-          "name": "pay",
-          "meta": {
-            "name": "pay"
-          },
-          "style": {
-            "navigationBarTitleText": "支付页面"
-          }
-        },
-        {
-          "path": "rich-text",
-          "name": "rich-text",
-          "meta": {
-            "name": "rich-text"
-          },
-          "style": {
-            "navigationBarTitleText": "rich-text"
-          }
-        },
-        {
-          "path": "skip-url",
-          "name": "skip-url",
-          "meta": {
-            "name": "skip-url"
-          },
-          "style": {
-            "navigationBarTitleText": "skip-url"
-          }
-        },
-        {
-          "path": "u-avatar-cropper",
-          "name": "u-avatar-cropper",
-          "meta": {
-            "name": "u-avatar-cropper"
-          },
-          "style": {
-            "navigationBarTitleText": "头像裁剪",
-            "navigationBarBackgroundColor": "#000000"
-          }
-        },
-        {
-          "path": "logistics-info",
-          "name": "logistics-info",
-          "meta": {
-            "name": "logistics-info"
-          },
-          "style": {
-            "navigationBarTitleText": "物流详情"
-          }
-        }
-      ]
-    }
-  ],
-  "preloadRule": {
-    "pages/index/home": {
-      "network": "all",
-      "packages": ["pages/common"]
-      // "packages": ["pages/tab-0", "pages/account", "pages/common"]
-    },
-    "pages/index/tab-0": {
-      "network": "all",
-      "packages": ["pages/common"]
-    },
-    "pages/index/account": {
-      "network": "all",
-      "packages": ["pages/common"]
-      // "packages": ["pages/account", "pages/tab-0", "pages/common"]
-    }
-  },
-  "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#000000",
-    "borderStyle": "black",
-    "backgroundColor": "#F8F8F8",
-    "list": [
-      {
-        "pagePath": "pages/index/tab-0",
-        "iconPath": "static/image/tab-0.png",
-        "selectedIconPath": "static/image/tab-0-active.png",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/index/tab-1",
-        "iconPath": "static/image/tab-1.png",
-        "selectedIconPath": "static/image/tab-1-active.png",
-        "text": "分类"
-      },
-      {
-        "pagePath": "pages/index/tab-2",
-        "iconPath": "static/image/tab-2.png",
-        "selectedIconPath": "static/image/tab-2-active.png",
-        "text": "购物车"
-      },
-      {
-        "pagePath": "pages/index/tab-3",
-        "iconPath": "static/image/tab-3.png",
-        "selectedIconPath": "static/image/tab-3-active.png",
-        "text": "我的"
-      }
-    ]
-  },
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-    }
-  },
-  "condition": {
-    "current": 0,
-    "list": [
-      {
-        "name": "tab-0",
-        "path": "pages/index/tab-0",
-        "query": ""
-      },
-      {
-        "name": "home",
-        "path": "pages/index/home",
-        "query": ""
-      },
-      {
-        "name": "tab-1",
-        "path": "pages/index/tab-1",
-        "query": ""
-      },
-      {
-        "name": "tab-2",
-        "path": "pages/index/tab-2",
-        "query": ""
-      },
-      {
-        "name": "tab-3",
-        "path": "pages/index/tab-3",
-        "query": ""
-      }
-    ]
-  }
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#2b9939",
+		"backgroundColor": "#f1f1f1"
+	},
+	"pages": [
+		{
+			"path": "pages/account/login/index",
+			"style": {
+				"navigationBarTitleText": "用户登录"
+			}
+		},
+		{
+			"path": "pages/index/tab-0/index",
+			"style": {
+				"navigationBarTitleText": "tab-0"
+			}
+		},
+		{
+			"path": "pages/index/tab-1/index",
+			"style": {
+				"navigationBarTitleText": "tab-1",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/index/tab-2/index",
+			"style": {
+				"navigationBarTitleText": "tab-2"
+			}
+		},
+		{
+			"path": "pages/index/tab-3/index",
+			"style": {
+				"navigationBarTitleText": "tab-3"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/tab-items-0",
+			"pages": [
+				{
+					"path": "demo/index",
+					"style": {
+						"navigationBarTitleText": "测试页"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/tab-items-1",
+			"pages": []
+		},
+		{
+			"root": "pages/tab-items-2",
+			"pages": []
+		},
+		{
+			"root": "pages/tab-items-3",
+			"pages": []
+		},
+		{
+			"root": "pages/account",
+			"pages": []
+		},
+		{
+			"root": "pages/common",
+			"pages": [
+				{
+					"path": "u-avatar-cropper/u-avatar-cropper",
+					"style": {
+						"navigationBarTitleText": "头像裁剪",
+						"navigationBarBackgroundColor": "#000000"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/account/login/index": {
+			"network": "all",
+			"packages": []
+		},
+		"pages/index/tab-0": {
+			"network": "all",
+			"packages": []
+		}
+	},
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#2b9939",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"iconPath": "static/images/tabbar/tab-0.png",
+				"selectedIconPath": "static/images/tabbar/tab-0-active.png",
+				"pagePath": "pages/index/tab-0/index",
+				"text": "tab-0"
+			},
+			{
+				"iconPath": "static/images/tabbar/tab-1.png",
+				"selectedIconPath": "static/images/tabbar/tab-1-active.png",
+				"pagePath": "pages/index/tab-1/index",
+				"text": "tab-1"
+			},
+			{
+				"iconPath": "static/images/tabbar/tab-2.png",
+				"selectedIconPath": "static/images/tabbar/tab-2-active.png",
+				"pagePath": "pages/index/tab-2/index",
+				"text": "tab-2"
+			},
+			{
+				"iconPath": "static/images/tabbar/tab-3.png",
+				"selectedIconPath": "static/images/tabbar/tab-3-active.png",
+				"pagePath": "pages/index/tab-3/index",
+				"text": "tab-3"
+			}
+		]
+	}
 }
