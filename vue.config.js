@@ -1,9 +1,11 @@
 const TransformPages = require('uni-read-pages');
 const devServerConfig = require('./src/configs/devServer');
+const pageConfig = require('./src/configs');
 
 const { webpack } = new TransformPages();
 
 module.exports = {
+  publicPath: pageConfig.appBasePath,
   // 配置路径别名
   configureWebpack: {
     devServer: {
