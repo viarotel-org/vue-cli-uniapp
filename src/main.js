@@ -8,7 +8,10 @@ import plugins from '@/plugins';
 
 import requests from '@/requests';
 
-import icons from '@/icons';
+import ViaIcon from '@/icons/components/ViaIcon/FontIcon';
+// todo 这样写会挂载不上 暂未解决
+// import icons from "@/icons";
+// Vue.use(icons);
 
 import directives from '@/directives';
 
@@ -25,6 +28,7 @@ App.mpType = 'app';
 Vue.use(router);
 Vue.use(plugins);
 Vue.use(requests);
+Vue.component('ViaIcon', ViaIcon);
 Vue.use(icons);
 Vue.use(directives);
 Vue.prototype.$tempImage = tempImage;
