@@ -4,21 +4,8 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   presets: [require('./src/configs/tailwindcss/preset')],
   important: true,
-  purge: {
-    enabled: isProduction,
-    preserveHtmlElements: true,
-    content: [
-      './src/pages/**/*.vue',
-      './src/components/**/*.vue',
-      './vue.config.js',
-    ],
-    options: {
-      safelist: [/^el-/, /^u-/],
-      blocklist: [],
-      keyframes: false,
-      fontFace: false,
-    },
-  },
+  // 禁用内置css清除 修复使用postcss-uniapp-tailwindcss对类名进行转换后无法正确清除未使用样式的问题
+  purge: false,
   theme: {
     extend: {
       colors: {

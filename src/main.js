@@ -29,7 +29,6 @@ Vue.use(router);
 Vue.use(plugins);
 Vue.use(requests);
 Vue.component('ViaIcon', ViaIcon);
-Vue.use(icons);
 Vue.use(directives);
 Vue.prototype.$tempImage = tempImage;
 Vue.prototype.$showDictLabel = showDictLabel;

@@ -1159,6 +1159,13 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
+"@fullhuman/postcss-purgecss@^3.1.3":
+  version "3.1.3"
+  resolved "https://registry.npmmirror.com/@fullhuman/postcss-purgecss/download/@fullhuman/postcss-purgecss-3.1.3.tgz#47af7b87c9bfb3de4bc94a38f875b928fffdf339"
+  integrity sha1-R697h8m/s95LyUo4+HW5KP/98zk=
+  dependencies:
+    purgecss "^3.1.3"
+
 "@hap-toolkit/aaptjs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmmirror.com/@hap-toolkit/aaptjs/download/@hap-toolkit/aaptjs-1.0.0.tgz#460d45a846c0b786a421c82ce25fcd9fff0928e6"
@@ -3589,6 +3596,11 @@ commander@^5.0.0:
   version "5.1.0"
   resolved "https://registry.npmmirror.com/commander/download/commander-5.1.0.tgz?cache=0&sync_timestamp=1634886396986&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcommander%2Fdownload%2Fcommander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
   integrity sha1-Rqu9FlL44Fm92u+Zu9yyrZzxea4=
+
+commander@^6.0.0:
+  version "6.2.1"
+  resolved "https://registry.npmmirror.com/commander/download/commander-6.2.1.tgz?cache=0&sync_timestamp=1634886396986&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcommander%2Fdownload%2Fcommander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
+  integrity sha1-B5LraC37wyWZm7K4T93duhEKxzw=
 
 commander@^8.0.0:
   version "8.3.0"
@@ -9254,7 +9266,7 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, po
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.3.5:
+postcss@^8.2.1, postcss@^8.3.5:
   version "8.4.4"
   resolved "https://registry.npmmirror.com/postcss/download/postcss-8.4.4.tgz#d53d4ec6a75fd62557a66bb41978bf47ff0c2869"
   integrity sha512-joU6fBsN6EIer28Lj6GDFoC/5yOZzLCfn0zHAn/MYXI7aPt4m4hK5KC5ovEZXy+lnCjmYIbQWngvju2ddyEr8Q==
@@ -9412,6 +9424,16 @@ purgecss@^2.3.0:
     commander "^5.0.0"
     glob "^7.0.0"
     postcss "7.0.32"
+    postcss-selector-parser "^6.0.2"
+
+purgecss@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.npmmirror.com/purgecss/download/purgecss-3.1.3.tgz#26987ec09d12eeadc318e22f6e5a9eb0be094f41"
+  integrity sha1-Jph+wJ0S7q3DGOIvblqesL4JT0E=
+  dependencies:
+    commander "^6.0.0"
+    glob "^7.0.0"
+    postcss "^8.2.1"
     postcss-selector-parser "^6.0.2"
 
 purgecss@^4.0.3:
