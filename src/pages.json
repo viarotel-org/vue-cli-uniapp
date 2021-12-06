@@ -85,11 +85,11 @@
 	"preloadRule": {
 		"pages/account/login/index": {
 			"network": "all",
-			"packages": []
+			"packages": ["pages/common"]
 		},
-		"pages/index/tab-0": {
+		"pages/index/tab-0/index": {
 			"network": "all",
-			"packages": []
+			"packages": ["pages/tab-items-0"]
 		}
 	},
 	"tabBar": {

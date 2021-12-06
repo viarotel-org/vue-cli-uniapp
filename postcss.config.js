@@ -6,6 +6,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const postcssPurgecss = () => require('@fullhuman/postcss-purgecss')({
   content: ['./public/**/*.html', './src/**/*.vue'],
   safelist: [
+    /^uni-/,
     /^uicon-/,
     /^u-/,
     ...require('html-tags'),
@@ -50,9 +51,9 @@ module.exports = {
     require('tailwindcss/nesting'),
     require('tailwindcss'),
     require('postcss-uniapp-tailwindcss-compatible'),
-    require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
     // 修复使用postcss-uniapp-tailwindcss对类名进行转换后无法正确清除未使用样式的问题
     ...(isProduction ? [postcssPurgecss()] : []),
+    require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),

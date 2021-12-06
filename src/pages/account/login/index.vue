@@ -17,7 +17,7 @@
         <u-input
           v-model="formData.username"
           type="text"
-          class="ml-2 felx-1"
+          class="flex-1 ml-2"
           placeholder="请输入用户名"
         />
       </view>
@@ -28,7 +28,7 @@
         <u-input
           v-model="formData.password"
           type="password"
-          class="ml-2 felx-1"
+          class="flex-1 ml-2"
           placeholder="请输入密码"
         />
       </view>
@@ -101,7 +101,7 @@ export default {
     async handleLoginAfter() {
       const params = {
         username: this.formData.username,
-        password: btoa(this.formData.password),
+        password: this.formData.password,
       };
       this.loading = true;
       const res = await this.$req.userLogin(params);

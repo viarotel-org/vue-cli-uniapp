@@ -1,4 +1,4 @@
-import ViaIcon from './components/ViaIcon/FontIcon';
+import ViaIcon from './components/ViaIcon';
 
 export default {
   install(app) {

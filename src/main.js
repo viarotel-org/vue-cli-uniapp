@@ -8,8 +8,8 @@ import plugins from '@/plugins';
 
 import requests from '@/requests';
 
-import ViaIcon from '@/icons/components/ViaIcon/FontIcon';
-// todo 这样写会挂载不上 暂未解决
+import ViaIcon from '@/icons/components/ViaIcon';
+// todo 这样写会挂载不上 待优化
 // import icons from "@/icons";
 // Vue.use(icons);
 
