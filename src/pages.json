@@ -53,22 +53,23 @@
 				}
 			]
 		},
-		{
-			"root": "pages/tab-items-1",
-			"pages": []
-		},
-		{
-			"root": "pages/tab-items-2",
-			"pages": []
-		},
-		{
-			"root": "pages/tab-items-3",
-			"pages": []
-		},
-		{
-			"root": "pages/account",
-			"pages": []
-		},
+		//为空时app端将会报错所以要注掉
+		// {
+		// 	"root": "pages/tab-items-1",
+		// 	"pages": []
+		// },
+		// {
+		// 	"root": "pages/tab-items-2",
+		// 	"pages": []
+		// },
+		// {
+		// 	"root": "pages/tab-items-3",
+		// 	"pages": []
+		// },
+		// {
+		// 	"root": "pages/account",
+		// 	"pages": []
+		// },
 		{
 			"root": "pages/common",
 			"pages": [
@@ -85,11 +86,17 @@
 	"preloadRule": {
 		"pages/account/login/index": {
 			"network": "all",
-			"packages": ["pages/common"]
+			"packages": [
+				"pages/common",
+				"pages/tab-items-0"
+			]
 		},
 		"pages/index/tab-0/index": {
 			"network": "all",
-			"packages": ["pages/tab-items-0"]
+			"packages": [
+				"pages/common",
+				"pages/tab-items-0"
+			]
 		}
 	},
 	"tabBar": {

@@ -1,10 +1,9 @@
 import colors from 'windicss/colors';
-import preset from './src/configs/windicss/preset';
 
 const useLineClamp = require('windicss/plugin/line-clamp');
 
 export default {
-  presets: [preset],
+  presets: [require('./src/configs/windicss/preset')],
   extract: {
     include: ['./src/**/*.{vue,nvue}'],
   },

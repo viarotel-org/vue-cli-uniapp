@@ -1,11 +1,9 @@
 <template>
   <view class="">
-    <view
-      class="flex flex-row items-center px-4 py-6 text-white bg-theme-primary"
-    >
+    <view class="flex flex-row items-center px-4 py-6 bg-theme-primary">
       <view class="flex flex-row items-center flex-1">
         <view
-          class="w-16 h-16 overflow-hidden border-2 border-gray-200 rounded-full "
+          class="w-16 h-16 overflow-hidden border-2 border-gray-200 rounded-full"
         >
           <image
             :src="avatar"
