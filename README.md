@@ -2,7 +2,7 @@
 
 # vue-uniapp-cli
 
-基于uniapp cli模式集成最佳实践脚手架, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [tailwindcss](https://www.tailwindcss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持, 完善了aes+rsa接口加密功能) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成) [查看预览地址(请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/)
+基于uniapp cli模式集成最佳实践脚手架, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [tailwindcss](https://www.tailwindcss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成) [查看预览地址(请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/)
 
 <!-- PROJECT SHIELDS -->
 
