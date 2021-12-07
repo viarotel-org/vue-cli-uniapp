@@ -1,7 +1,7 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
 const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
-  title: 'vue-uniapp-cli',
+  title: 'vue-cli-uniapp',
   logo: () => require('@/static/images/logo.png'),
   showMocks: () => isDevelopment,
   // 项目基础路径

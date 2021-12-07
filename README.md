@@ -1,6 +1,6 @@
 
 
-# vue-uniapp-cli
+# vue-cli-uniapp
 
 基于uniapp cli模式集成最佳实践脚手架, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [tailwindcss](https://www.tailwindcss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成) [查看预览地址(请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/)
 
@@ -17,21 +17,21 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/Viarotel/vue-uniapp-cli">
+  <a href="https://github.com/Viarotel/vue-cli-uniapp">
     <img src="src/static/images/logo.png" alt="viarotel" height="80">
   </a>
-  <h3 align="center">vue-uniapp-cli</h3>
+  <h3 align="center">vue-cli-uniapp</h3>
   <p align="center">
     基于VueCli模式的uniapp脚手架集成模板
     <br />
-    <a href="https://github.com/Viarotel/vue-uniapp-cli"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/Viarotel/vue-cli-uniapp"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Viarotel/vue-uniapp-cli">查看Demo</a>
+    <a href="https://github.com/Viarotel/vue-cli-uniapp">查看Demo</a>
     ·
-    <a href="https://github.com/Viarotel/vue-uniapp-cli/issues">报告Bug</a>
+    <a href="https://github.com/Viarotel/vue-cli-uniapp/issues">报告Bug</a>
     ·
-    <a href="https://github.com/Viarotel/vue-uniapp-cli/issues">提出新特性</a>
+    <a href="https://github.com/Viarotel/vue-cli-uniapp/issues">提出新特性</a>
   </p>
 
 
@@ -59,7 +59,7 @@
 1. clone 本项目 或 直接下载main包
 
 ```sh
-git clone https://github.com/viarotel/vue-uniapp-cli.git
+git clone https://github.com/viarotel/vue-cli-uniapp.git
 ```
 
 #### 运行项目
@@ -180,16 +180,16 @@ qq:523469508 wx: luyao-ing
 
 <!-- links -->
 
-[your-project-path]:viarotel/vue-uniapp-cli
-[contributors-shield]: https://img.shields.io/github/contributors/viarotel/vue-uniapp-cli.svg?style=flat-square
-[contributors-url]: https://github.com/viarotel/vue-uniapp-cli/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/viarotel/vue-uniapp-cli.svg?style=flat-square
-[forks-url]: https://github.com/viarotel/vue-uniapp-cli/network/members
-[stars-shield]: https://img.shields.io/github/stars/viarotel/vue-uniapp-cli.svg?style=flat-square
-[stars-url]: https://github.com/viarotel/vue-uniapp-cli/stargazers
-[issues-shield]: https://img.shields.io/github/issues/viarotel/vue-uniapp-cli.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/viarotel/vue-uniapp-cli.svg
-[license-shield]: https://img.shields.io/github/license/viarotel/vue-uniapp-cli.svg?style=flat-square
-[license-url]: https://github.com/viarotel/vue-uniapp-cli/blob/master/LICENSE
+[your-project-path]:viarotel/vue-cli-uniapp
+[contributors-shield]: https://img.shields.io/github/contributors/viarotel/vue-cli-uniapp.svg?style=flat-square
+[contributors-url]: https://github.com/viarotel/vue-cli-uniapp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/viarotel/vue-cli-uniapp.svg?style=flat-square
+[forks-url]: https://github.com/viarotel/vue-cli-uniapp/network/members
+[stars-shield]: https://img.shields.io/github/stars/viarotel/vue-cli-uniapp.svg?style=flat-square
+[stars-url]: https://github.com/viarotel/vue-cli-uniapp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/viarotel/vue-cli-uniapp.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/viarotel/vue-cli-uniapp.svg
+[license-shield]: https://img.shields.io/github/license/viarotel/vue-cli-uniapp.svg?style=flat-square
+[license-url]: https://github.com/viarotel/vue-cli-uniapp/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/viarotel
