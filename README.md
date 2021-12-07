@@ -2,7 +2,7 @@
 
 # vue-cli-uniapp
 
-基于uniapp cli模式集成最佳实践脚手架, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [tailwindcss](https://www.tailwindcss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成) [查看预览地址(请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/)
+基于uniapp cli模式集成最佳实践脚手架, ui库使用 [uview](https://v1.uviewui.com/)(已配置全自动按需导入), css 框架使用 [windicss](https://www.windicss.cn/)(下一代css框架), 请求使用[axios](http://www.axios-js.com/)的方式(添加了uniapp适配器支持) 路由使用 [uni-simple-router](https://hhyang.cn/v2/)(同vue-router的api无须重新阅读文档,配置了路由自动生成) [查看预览地址(请将浏览器切换为手机模式打开,账号密码不为空即可,由于是免费的服务器,如遇打不开的情况,请多刷新几次)](https://static-3e173b30-f914-4276-8526-f91cd7e32d6a.bspapp.com/)
 
 <!-- PROJECT SHIELDS -->
 
@@ -132,7 +132,7 @@ filetree
 ├── package.json //包管理配置文件
 ├── postcss.config.js //对css文件进行编译转换增强的配置文件
 ├── README.md
-├── tailwind.config.js //tailwindcss的配置文件
+├── tailwind.config.js //windicss的配置文件
 ├── jsconfig.json //JavaScript语言服务的配置文件 代码提示 文件索引等问题
 ├── vue.config.js //vuecli配置文件
 └── yarn.lock //yarn锁定依赖版本
@@ -143,7 +143,7 @@ filetree
 - [uniapp](https://uniapp.dcloud.io/)
 - [Vue-CLI](https://cli.vuejs.org)
 - [uview](https://www.uviewui.com/)
-- [tailwindcss](https://www.tailwindcss.cn/)
+- [windicss](https://windicss.org/)
 - [axios](http://www.axios-js.com/)
 - [vuex](https://vuex.vuejs.org/zh/)
 - [uni-simple-router](https://hhyang.cn/v2/)
@@ -152,7 +152,7 @@ filetree
 
 - vue
 - uview
-- tailwindcss
+- windicss
 - axios
 - vuex
 - uni-simple-router
