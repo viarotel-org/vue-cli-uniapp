@@ -11,7 +11,7 @@
     </view>
     <view class="px-6 py-8 mx-4 mt-12 bg-white rounded-md">
       <view
-        class="flex flex-row items-center px-4 py-1 border border-blue-200 rounded-md "
+        class="flex flex-row items-center px-4 py-1 border border-blue-200 rounded-md"
       >
         <via-icon name="icon-xingmingyonghumingnicheng"></via-icon>
         <u-input
@@ -22,7 +22,7 @@
         />
       </view>
       <view
-        class="flex flex-row items-center px-4 py-1 mt-6 border border-blue-200 rounded-md "
+        class="flex flex-row items-center px-4 py-1 mt-6 border border-blue-200 rounded-md"
       >
         <via-icon name="icon-mima"></via-icon>
         <u-input

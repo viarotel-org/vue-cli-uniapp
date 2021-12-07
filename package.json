@@ -85,8 +85,6 @@
     "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-32920211029004",
     "@dcloudio/webpack-uni-mp-loader": "^2.0.0-32920211029004",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.0-32920211029004",
-    "@fullhuman/postcss-purgecss": "^3.1.3",
-    "@tailwindcss/line-clamp": "^0.2.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -98,7 +96,6 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-vue": "^6.2.2",
-    "html-tags": "^3.1.0",
     "jest": "^25.4.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
@@ -106,13 +103,12 @@
     "postcss-comment": "^2.0.0",
     "postcss-import": "12.0.1",
     "postcss-nested": "4.2.3",
-    "postcss-uniapp-tailwindcss-compatible": "^1.0.3",
+    "postcss-windicss-postcss7": "^1.1.1",
     "sass": "^1.43.4",
     "sass-loader": "10",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "tailwindcss-textshadow": "^2.1.3",
     "uni-read-pages": "^1.0.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "windicss": "^3.2.1"
   },
   "browserslist": [
     "Android >= 4.4",

@@ -1,5 +1,5 @@
-@import "./uni-base.css";
-@import "./tailwind.css";
+@import "./base-uni.css";
+@import "./windicss.css";
 
 /* 隐藏滚动条 */
 .scrollbar-none::-webkit-scrollbar {
