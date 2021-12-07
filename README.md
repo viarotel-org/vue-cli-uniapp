@@ -190,6 +190,6 @@ qq:523469508 wx: luyao-ing
 [issues-shield]: https://img.shields.io/github/issues/viarotel/vue-cli-uniapp.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/viarotel/vue-cli-uniapp.svg
 [license-shield]: https://img.shields.io/github/license/viarotel/vue-cli-uniapp.svg?style=flat-square
-[license-url]: https://github.com/viarotel/vue-cli-uniapp/main/LICENSE
+[license-url]: https://github.com/viarotel/vue-cli-uniapp/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/viarotel
