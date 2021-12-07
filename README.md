@@ -17,21 +17,21 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/Viarotel/vue-cli-uniapp">
+  <a href="https://github.com/viarotel/vue-cli-uniapp">
     <img src="src/static/images/logo.png" alt="viarotel" height="80">
   </a>
   <h3 align="center">vue-cli-uniapp</h3>
   <p align="center">
     基于VueCli模式的uniapp脚手架集成模板
     <br />
-    <a href="https://github.com/Viarotel/vue-cli-uniapp"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/viarotel/vue-cli-uniapp"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Viarotel/vue-cli-uniapp">查看Demo</a>
+    <a href="https://github.com/viarotel/vue-cli-uniapp">查看Demo</a>
     ·
-    <a href="https://github.com/Viarotel/vue-cli-uniapp/issues">报告Bug</a>
+    <a href="https://github.com/viarotel/vue-cli-uniapp/issues">报告Bug</a>
     ·
-    <a href="https://github.com/Viarotel/vue-cli-uniapp/issues">提出新特性</a>
+    <a href="https://github.com/viarotel/vue-cli-uniapp/issues">提出新特性</a>
   </p>
 
 
