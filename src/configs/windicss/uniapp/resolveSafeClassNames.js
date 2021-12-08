@@ -1,5 +1,4 @@
 const isObject = (value) => Object.prototype.toString.call(value) === '[object Object]';
-
 /**
  * 默认替换规则
  */
@@ -27,13 +26,13 @@ const escape = (str, rules = defaultRules) => rules.reduce(
 /**
  * 遍历并转义配置
  */
-const resolveConfig = (data, rules) => {
+const resolve = (data, rules) => {
   if (!isObject(data)) {
     return data;
   }
 
   return Object.entries(data).reduce((obj, [key, value]) => {
-    obj[escape(key, rules)] = resolveConfig(value, rules);
+    obj[escape(key, rules)] = resolve(value, rules);
     return obj;
   }, {});
 };
@@ -41,5 +40,5 @@ const resolveConfig = (data, rules) => {
 module.exports = {
   defaultRules,
   escape,
-  resolveConfig,
+  resolve,
 };

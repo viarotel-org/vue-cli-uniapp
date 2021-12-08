@@ -1,30 +1,27 @@
 const defaultTheme = require('windicss/defaultTheme');
-const {
-  resolveConfig: resolveSafeClassNames,
-} = require('./resolveSafeClassNames');
+const safeClassNames = require('./resolveSafeClassNames');
 
 const theme = [
   'spacing',
   'width',
   'height',
-  'inset',
   'margin',
   'padding',
+  'inset',
   'maxWidth',
   'minWidth',
   'maxHeight',
   'minHeight',
-  'borderWidth',
   'translate',
   'space',
-  'divideWidth',
-  'ringWidth',
+  'gap',
+  'perspective',
 ].reduce((obj, key) => {
-  obj[key] = resolveSafeClassNames(defaultTheme[key]);
+  obj[key] = safeClassNames.resolve(defaultTheme[key]);
   return obj;
 }, {});
 
-console.log('space', theme.divideWidth);
+// console.log('theme', theme);
 
 module.exports = {
   separator: '_',
