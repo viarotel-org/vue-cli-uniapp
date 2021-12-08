@@ -1,8 +1,8 @@
 import colors from 'windicss/colors';
 
-const useLineClamp = require('windicss/plugin/line-clamp');
-
 const { transform } = require('windicss/helpers');
+
+const useLineClamp = require('windicss/plugin/line-clamp');
 
 const useTextShadow = transform('tailwindcss-textshadow');
 
