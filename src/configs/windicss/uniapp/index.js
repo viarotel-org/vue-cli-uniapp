@@ -1,4 +1,9 @@
 const defaultTheme = require('windicss/defaultTheme');
+const { transform } = require('windicss/helpers');
+const useLineClamp = require('windicss/plugin/line-clamp');
+
+const useTextShadow = transform('tailwindcss-textshadow');
+
 const safeClassNames = require('./resolveSafeClassNames');
 
 const theme = [
@@ -30,4 +35,5 @@ module.exports = {
     ...theme,
     extend: {},
   },
+  plugins: [useLineClamp, useTextShadow],
 };

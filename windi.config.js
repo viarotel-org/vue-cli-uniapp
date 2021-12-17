@@ -1,11 +1,5 @@
 import colors from 'windicss/colors';
 
-const { transform } = require('windicss/helpers');
-
-const useLineClamp = require('windicss/plugin/line-clamp');
-
-const useTextShadow = transform('tailwindcss-textshadow');
-
 export default {
   presets: [require('./src/configs/windicss/preset')],
   extract: {
@@ -19,5 +13,4 @@ export default {
       },
     },
   },
-  plugins: [useLineClamp, useTextShadow],
 };
