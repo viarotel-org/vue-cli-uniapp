@@ -30,6 +30,8 @@ const theme = [
 
 module.exports = {
   separator: '_',
+  // 小程序不需要可以关闭基础样式 不过即使打开不支持的css语法也会被postcss的uniapp插件转换所以也不会有问题
+  // preflight: false,
   important: true,
   theme: {
     ...theme,
