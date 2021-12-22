@@ -12,7 +12,7 @@ module.exports = {
       // 调试时允许内网穿透，让外网的人访问到本地调试的H5页面
       disableHostCheck: true,
       // 环境配置
-      port: devServerConfig.port,
+      port: devServerConfig.proxyPort,
       hot: true, // false防止开发模式白屏(使用路由缓存时)
       ...(devServerConfig.useProxy && devServerConfig.proxyURL
         ? {

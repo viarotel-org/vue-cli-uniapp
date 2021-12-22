@@ -1,12 +1,14 @@
-const { requsetURL } = require('./index');
+const {
+  requsetURL, useProxy, proxyPort, proxyPath,
+} = require('./index');
 
 module.exports = {
   // 端口号
-  port: 7777,
+  proxyPort,
   // 是否使用代理
-  useProxy: true,
+  useProxy,
   // 代理路径
-  proxyPath: '/api',
+  proxyPath,
   // 代理地址
   proxyURL: requsetURL,
 };

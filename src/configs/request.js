@@ -1,6 +1,5 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
-const { requsetURL } = require('./index');
-const { proxyPath, useProxy } = require('./devServer');
+const { requsetURL, proxyPath, useProxy } = require('./index');
 
 let baseURL = '';
 if (process.env.UNI_PLATFORM === 'h5' && useProxy) {
