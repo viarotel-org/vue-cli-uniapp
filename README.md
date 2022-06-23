@@ -165,7 +165,7 @@ filetree
 
 viarotel@qq.com
 
-qq:523469508 wx: luyao-ing
+qq:523469508 wx: viarotel
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
