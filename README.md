@@ -1,4 +1,4 @@
-> 后续更新已迁移至 [vite-uniapp-template][https://github.com/viarotel/vite-uniapp-template] 基于vite驱动的uniapp最佳实践的集成模板 此项目库停止更新 仅作参考和有限的技术支持
+> 后续更新已迁移至 [vite-uniapp-template](https://github.com/viarotel/vite-uniapp-template) 基于vite驱动的uniapp最佳实践的集成模板 此项目库停止更新 仅作参考和有限的技术支持
 
 # vue-cli-uniapp
 
